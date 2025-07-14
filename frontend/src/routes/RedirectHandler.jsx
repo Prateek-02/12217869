@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Log } from "loggingMiddleware";
+import { Log } from "logging-middleware";
 
 export default function RedirectHandler({ urls, updateClick }) {
   const { shortcode } = useParams();

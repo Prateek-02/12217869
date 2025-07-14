@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Grid, Paper, Typography } from '@mui/material';
 import { isValidUrl, isValidShortcode } from '../utils/validators';
-import { Log } from 'loggingMiddleware';
+import { Log } from 'logging-middleware';
 
 function ShortenerForm({ urls, setUrls }) {
   const [inputUrl, setInputUrl] = useState([
