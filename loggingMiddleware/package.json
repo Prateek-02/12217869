@@ -1,0 +1,8 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Reusable Logging Middleware for evaluation project",
+  "main": "index.js",
+  "author": "Prateek",
+  "license": "MIT"
+}
