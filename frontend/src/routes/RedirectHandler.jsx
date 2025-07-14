@@ -6,6 +6,11 @@ export default function RedirectHandler({ urls, updateClick }) {
   const { shortcode } = useParams();
 
   useEffect(() => {
+    if (!Array.isArray(urls)) {
+      Log("frontend", "error", "page", "URLs prop is not an array or is undefined.");
+      return;
+    }
+
     const found = urls.find((u) => u.shortcode === shortcode);
     if (!found) {
       alert("Invalid shortcode.");

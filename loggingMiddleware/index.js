@@ -59,7 +59,11 @@ export async function Log(stack, level, pkg, message) {
   try {
     const response = await fetch(LOGGING_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        // Add this line if you have a token
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJwcmF0ZWVrcmFqZ3JkNzRAZ21haWwuY29tIiwiZXhwIjoxNzUyNDc3MDIyLCJpYXQiOjE3NTI0NzYxMjIsImlzcyI6IkFmZm9yZCBNZWRpY2FsIFRlY2hub2xvZ2llcyBQcml2YXRlIExpbWl0ZWQiLCJqdGkiOiJmMTFmZTI1ZS01ODI1LTRjOGQtYjJhOS1hOWFlYWFhYmRjNWMiLCJsb2NhbGUiOiJlbi1JTiIsIm5hbWUiOiJwcmF0ZWVrIHJhaiIsInN1YiI6IjE2ZjJjYzllLTE4YTUtNGNlMC04NGU3LTBmY2NiM2ExYTYzMSJ9LCJlbWFpbCI6InByYXRlZWtyYWpncmQ3NEBnbWFpbC5jb20iLCJuYW1lIjoicHJhdGVlayByYWoiLCJyb2xsTm8iOiIxMjIxNzg2OSIsImFjY2Vzc0NvZGUiOiJDWnlwUUsiLCJjbGllbnRJRCI6IjE2ZjJjYzllLTE4YTUtNGNlMC04NGU3LTBmY2NiM2ExYTYzMSIsImNsaWVudFNlY3JldCI6IkFYUlB2TU1OWW1LVUd4UHkifQ.2IdcmQQKKY4LmzCHJrHT3-aZKaccluj9QJZqVSq7-ig"
+      },
       body: JSON.stringify(payload)
     });
 
