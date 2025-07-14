@@ -1,4 +1,7 @@
-// Allowed values for logging
+import dotenv from "dotenv";
+dotenv.config({ path: "./loggingMiddleware/.env" });
+
+
 const allowedStacks = ["frontend", "backend"];
 const allowedLevels = ["debug", "info", "warn", "error", "fatal"];
 const allowedPackages = [
@@ -12,6 +15,7 @@ const allowedPackages = [
 
 // Endpoint to send logs to
 const LOGGING_ENDPOINT = "http://20.244.56.144/evaluation-service/logs";
+const BEARER_TOKEN = process.env.BEARER_TOKEN;
 
 /**
  * Send a log event to the evaluation server.

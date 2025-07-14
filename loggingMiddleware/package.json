@@ -4,5 +4,8 @@
   "description": "Reusable Logging Middleware for evaluation project",
   "main": "index.js",
   "author": "Prateek",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
 }
