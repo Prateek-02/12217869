@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Paper, Typography, Link } from '@mui/material';
-import { Log } from 'logging-middleware';
+import { Log } from 'loggingMiddleware';
 
 function StatisticsPage({ urls }) {
     useEffect(() => {
